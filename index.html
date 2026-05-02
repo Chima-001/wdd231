@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is a Chimamkpam Nnaji's WDD231 course home page showcasing web development courses and projects.">
+    <meta name="author" content="Chimamkpam Nnaji">
+    <title>Chimamkpam Nnaji | WDD231</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/homepage-small.css">
+    <link rel="stylesheet" href="styles/homepage-large.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="site logo">
+        <span>Chima Nnaji</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        <div class="profile">
+            <section class="about">
+                <h2>About Me</h2>
+                <p>I'm Chima Nnaji, a software development student at BYU-Pathway Worldwide based in Nigeria. I build
+                    for the web and am working toward a remote career in software development. My skills include HTML,
+                    CSS, JavaScript, Python, C#, and AutoCAD.</p>
+            </section>
+            <section class="photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile-picture.webp" alt="Chima Nnaji" loading="lazy">
+            </section>
+        </div>
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="all" class="active">All</button>
+                <button id="wdd">WDD</button>
+                <button id="cse">CSE</button>
+            </div>
+            <div id="course-list"></div>
+            <p id="credit-total"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/chima-nnaji-1621523a3" aria-label="LinkedIn" target="_blank"
+                rel="noopener">
+                <img src="images/linkedin-3.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Chima-001" aria-label="GitHub" target="_blank" rel="noopener">
+                <img src="images/github-text.svg" alt="GitHub">
+            </a>
+            <a href="https://x.com/_heisChima" aria-label="X" target="_blank" rel="noopener">
+                <img src="images/twitter-square.svg" alt="twitter">
+            </a>
+        </div>
+        <p>© <span id="currentyear"></span> • Chima Nnaji • Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+@media (min-width: 640px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+
+  .navigation ul li a {
+    border-bottom: none;
+    padding: 1rem 1.5rem;
+  }
+
+  header span {
+    font-size: 2rem;
+
+  }
+
+  .profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  #course-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(33% - 0.5rem);
+    min-width: 100px;
+    text-align: center;
+  }
+}
