@@ -1,0 +1,33 @@
+{
+    "family_name": "Nnaji",
+    "moved_in_date": "2025-04-28",
+    "number_of_people": 5,
+    "visited_by_bishopric": false,
+    "family_members": [
+        {
+            "name": "Eric Nnaji",
+            "gender": "Male",
+            "birthdate": "1974-03-23"
+        },
+        {
+            "name": "Amanda Nnaji",
+            "gender": "Female",
+            "birthdate": "1980-11-02"
+        },
+        {
+            "name": "Mark Nnaji",
+            "gender": "Male",
+            "birthdate": "2002-08-16"
+        },
+        {
+            "name": "Chima Nnaji",
+            "gender": "Male",
+            "birthdate": "2005-10-26"
+        },
+        {
+            "name": "Loveth Nnaji",
+            "gender": "Female",
+            "birthdate": "2007-11-18"
+        }
+    ]
+}
