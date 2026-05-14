@@ -1,0 +1,112 @@
+{
+    "members": [
+        {
+            "name": "Enugu Power Solutions",
+            "address": "14 Ogui Road, New-Layout, Enugu",
+            "phone": "070-9801-2345",
+            "website": "https://enugupowersolutions.ng",
+            "image": "solar-1.webp",
+            "membershipLevel": 3,
+            "description": "Leading provider of solar and electrical solutions in Enugu State."
+        },
+        {
+            "name": "Eastern Tech Hub",
+            "address": "7 Ofia Street, Independence Layout, Enugu",
+            "phone": "080-4802-3456",
+            "website": "https://easterntechhub.ng",
+            "image": "tech-office-1.webp",
+            "membershipLevel": 3,
+            "description": "Connecting tech talent and businesses across Eastern Nigeria."
+        },
+        {
+            "name": "Coal City Ventures",
+            "address": "22 Umuchu Street, Zik Avenue, Enugu",
+            "phone": "070-6576-4567",
+            "website": "https://coalcityventures.ng",
+            "image": "business-1.webp",
+            "membershipLevel": 2,
+            "description": "Investment and business development firm serving SMEs in Enugu."
+        },
+        {
+            "name": "Ogbete Fresh Market",
+            "address": "Plaza 503-590, Ogbete Main Market, Enugu",
+            "phone": "090-8804-5678",
+            "website": "https://enugufreshmarket.ng",
+            "image": "fresh-market-2.webp",
+            "membershipLevel": 2,
+            "description": "Wholesale and retail fresh produce supplier for homes and businesses."
+        },
+        {
+            "name": "Heritage Hotels Enugu",
+            "address": "1 Nike Lake Road, Abakpa-Nike, Enugu",
+            "phone": "081-8805-6789",
+            "website": "https://heritagehotelsenugu.ng",
+            "image": "lobby-1.webp",
+            "membershipLevel": 3,
+            "description": "Premium hospitality and conference facilities in the heart of Enugu."
+        },
+        {
+            "name": "Sunrise Logistics Ltd",
+            "address": "33 Abakaliki Road, Enugu",
+            "phone": "070-5806-7890",
+            "website": "https://sunriselogistics.ng",
+            "image": "logistics-1.webp",
+            "membershipLevel": 1,
+            "description": "Reliable freight and last-mile delivery services across Nigeria."
+        },
+        {
+            "name": "Green Valley Farms",
+            "address": "Km 10 Enugu-Onitsha Expressway, Enugu",
+            "phone": "070-8807-8901",
+            "website": "https://greenvalleyfarms.ng",
+            "image": "farm-1.webp",
+            "membershipLevel": 1,
+            "description": "Commercial agriculture and agro-processing enterprise in Enugu State."
+        },
+        {
+            "name": "Afia Media Group",
+            "address": "5 Ogui Road, New-Layout, Enugu",
+            "phone": "080-8966-7787",
+            "website": "https://afiaumediagroup.ng",
+            "image": "studio-1.webp",
+            "membershipLevel": 2,
+            "description": "Leading media and communications company serving Enugu State and beyond."
+        },
+        {
+            "name": "Enugu Heritage Artifacts",
+            "address": "3 Mkpokiti Road, Enugu",
+            "phone": "070-1808-9012",
+            "website": "https://enuguheritageartifacts.ng",
+            "image": "artifact.webp",
+            "membershipLevel": 2,
+            "description": "Award-winning artifacts collecting firm specializing in heritage, vintage, and historical artifacts."
+        },
+        {
+            "name": "042 Coffee",
+            "address": "207 Agbani Road, Enugu",
+            "phone": "081-5656-9012",
+            "website": "https://042coffee.ng",
+            "image": "coffee-1.webp",
+            "membershipLevel": 2,
+            "description": "Premium coffee lounge serving locally sourced and imported blends in Enugu."
+        },
+        {
+            "name": "Desert Tours",
+            "address": "40 Kaduna Street, Achara-Layout, Enugu",
+            "phone": "070-7811-2345",
+            "website": "https://deserttours.ng",
+            "image": "desert.webp",
+            "membershipLevel": 1,
+            "description": "Exotic Travel and adventure tours across Nigeria and Africa."
+        },
+        {
+            "name": "Open Waters Rafting Company",
+            "address": "Km 25 Enugu-PH Expressway, Enugu",
+            "phone": "090-8123-9456",
+            "website": "https://openwatersrafting.ng",
+            "image": "rafting.webp",
+            "membershipLevel": 3,
+            "description": "Thrilling open water rafting adventures across Nigeria."
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enugu Chamber of Commerce business member directory.">
+  <meta name="author" content="Chimamkpam Nnaji">
+  <title>Directory | Enugu Chamber of Commerce</title>
+  <meta property="og:title" content="Directory | Enugu Chamber of Commerce">
+  <meta property="og:description" content="Browse the full list of member businesses in the Enugu Chamber of Commerce.">
+  <meta property="og:image" content="https://chima-001.github.io/wdd231/chamber/images/logo.webp">
+  <meta property="og:url" content="https://chima-001.github.io/wdd231/chamber/directory.html">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber-small.css">
+  <link rel="stylesheet" href="styles/chamber-larger.css">
+  <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav-top">
+      <div class="header-left">
+        <img src="images/logo.webp" alt="Enugu Chamber logo" id="logo">
+        <div class="chamber-title">
+          <span class="site-name">Enugu Chamber of Commerce</span>
+          <span class="tagline">Building Business. Building Community.</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+      </div>
+    </div>
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="current"><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button id="dark-mode-btn" aria-label="Toggle dark mode">
+        <img class="theme-icon" src="images/night.svg" alt="theme toggle">
+      </button>
+    </nav>
+  </header>
+
+
+  <main>
+    <h1>Business Directory</h1>
+    <div class="view-toggle">
+      <button id="grid-btn" aria-label="Grid view" class="active-view">&#9707;</button>
+      <button id="list-btn" aria-label="List view">&#9776;</button>
+    </div>
+    <div id="directory" class="grid"></div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p class="chamber-name">Enugu Chamber of Commerce</p>
+      <p>12 Independence Layout, Enugu-North</p>
+      <p>Enugu, Nigeria</p>
+      <p>info@enuguchamber.org</p>
+      <p>+234 705-899-3954</p>
+    </div>
+    <div class="social-links">
+      <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener">
+        <img src="images/youtube-1.svg" alt="YouTube">
+      </a>
+      <a href="https://x.com" aria-label="X" target="_blank" rel="noopener">
+        <img src="images/twitter-3.svg" alt="X">
+      </a>
+      <a href="https://linkendin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <img src="images/linkedin-square.svg" alt="LinkedIn">
+      </a>
+    </div>
+    <div class="footer-right">
+      <p>WDD 231 Class Project</p>
+      <p>Chimamkpam Nnaji</p>
+      <p>&copy; <span id="copyright-year"></span> Enugu Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+
+</html>
