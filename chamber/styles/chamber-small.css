@@ -42,10 +42,12 @@ body.dark {
 }
 
 header {
+  display: block;
   background-color: var(--primary);
   position: sticky;
   z-index: 100;
   top: 0;
+  align-items: center;
 }
 
 .header-left {
@@ -91,7 +93,7 @@ header {
   border: none;
   padding: 0;
   position: absolute;
-  right: 35px;
+  right: 37px;
   top: 2px;
 }
 
@@ -225,12 +227,13 @@ h1 {
   gap: 1rem;
   text-align: center;
   justify-content: center;
+  justify-items: center;
 }
 
-#directory.grid::after {
+/*#directory.grid::after {
   content: "";
   position: absolute;
-}
+}*/
 
 #directory.list {
   gap: 0.75rem;
