@@ -54,7 +54,6 @@ header {
   gap: 0.75rem;
 }
 
-
 #logo {
   width: 60px;
   height: 60px;
@@ -345,7 +344,6 @@ footer {
 
 .social-links {
   display: flex;
-  gap: 1rem;
   gap: 2rem;
 }
 
@@ -371,7 +369,7 @@ footer {
   }
 
   .tagline {
-    font-size: 0.75;
+    font-size: 0.75rem;
   }
 
   .hamburger {
@@ -398,7 +396,7 @@ footer {
   }
 
   #directory.grid {
-    grid-template-columns: repeat(auto-fit, min-max(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   #directory.list .member-card {
