@@ -13,6 +13,7 @@ async function getMembers() {
 }
 
 const displayMembers = (members) => {
+  if (!container) return;
   members.forEach((member) => {
     const card = document.createElement('div');
     const name = document.createElement('h2');
@@ -53,61 +54,67 @@ const displayMembers = (members) => {
   });
 };
 
-const savedView = localStorage.getItem('view') || 'grid';
-container.className = savedView;
-if (savedView === 'list') {
-  listBtn.classList.add('active-view');
-  gridBtn.classList.remove('active-view');
-} else {
-  gridBtn.classList.add('active-view');
-  listBtn.classList.remove('active-view');
+if (container && gridBtn && listBtn) {
+  const savedView = localStorage.getItem('view') || 'grid';
+  container.className = savedView;
+  if (savedView === 'list') {
+    listBtn.classList.add('active-view');
+    gridBtn.classList.remove('active-view');
+  } else {
+    gridBtn.classList.add('active-view');
+    listBtn.classList.remove('active-view');
+  }
+
+  gridBtn.addEventListener('click', () => {
+    container.classList.add('grid');
+    container.classList.remove('list');
+    gridBtn.classList.add('active-view');
+    listBtn.classList.remove('active-view');
+    localStorage.setItem('view', 'grid');
+  });
+
+  listBtn.addEventListener('click', () => {
+    container.classList.add('list');
+    container.classList.remove('grid');
+    listBtn.classList.add('active-view');
+    gridBtn.classList.remove('active-view');
+    localStorage.setItem('view', 'list');
+  });
 }
-
-gridBtn.addEventListener('click', () => {
-  container.classList.add('grid');
-  container.classList.remove('list');
-  gridBtn.classList.add('active-view');
-  listBtn.classList.remove('active-view');
-  localStorage.setItem('view', 'grid');
-});
-
-listBtn.addEventListener('click', () => {
-  container.classList.add('list');
-  container.classList.remove('grid');
-  listBtn.classList.add('active-view');
-  gridBtn.classList.remove('active-view');
-  localStorage.setItem('view', 'list');
-});
 
 document.querySelector('#copyright-year').textContent = new Date().getFullYear();
 document.querySelector('#lastModified').textContent = `Last Modified: ${document.lastModified}`;
 
-navButton.addEventListener('click', () => {
-  navButton.classList.toggle('show');
-  navBar.classList.toggle('show');
-  darkBtn.classList.toggle('hidden');
-});
-
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
-  darkBtn.innerHTML = '<img src="images/day.svg" alt="theme toggle">';
+if (navButton && navBar) {
+  navButton.addEventListener('click', () => {
+    navButton.classList.toggle('show');
+    navBar.classList.toggle('show');
+    darkBtn.classList.toggle('hidden');
+  });
 }
 
-darkBtn.addEventListener('click', () => {
-  const icon = darkBtn.querySelector('img');
-  icon.classList.add('spin');
-  setTimeout(() => {
-    icon.classList.remove('spin');
+if (darkBtn) {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    darkBtn.innerHTML = '<img src="images/day.svg" alt="theme toggle">';
+  }
 
-    if (document.body.classList.contains('dark')) {
-      darkBtn.innerHTML = '<img src="images/day.svg" alt="theme toggle">';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      darkBtn.innerHTML = '<img src="images/night.svg" alt="theme toggle">';
-      localStorage.setItem('theme', 'light');
-    }
-  }, 300);
-  document.body.classList.toggle('dark');
-});
+  darkBtn.addEventListener('click', () => {
+    const icon = darkBtn.querySelector('img');
+    icon.classList.add('spin');
+    setTimeout(() => {
+      icon.classList.remove('spin');
 
-getMembers();
+      if (document.body.classList.contains('dark')) {
+        darkBtn.innerHTML = '<img src="images/day.svg" alt="theme toggle">';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        darkBtn.innerHTML = '<img src="images/night.svg" alt="theme toggle">';
+        localStorage.setItem('theme', 'light');
+      }
+    }, 300);
+    document.body.classList.toggle('dark');
+  });
+}
+
+if (container) getMembers();

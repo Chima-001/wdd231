@@ -1,0 +1,67 @@
+:root {
+  --bg-color: #0f172a;
+  --surface-color: #1e293b;
+  --accent-color: #22d3ee;
+  --text-color: #f1f5f9;
+  --muted-color: #b0bfce;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--accent-color);
+  font-size: 1.6rem;
+  margin: 0 0 1rem;
+}
+
+figure {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--surface-color);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 12px;
+  display: inline-block;
+}
+
+#weather-icon {
+  width: 72px;
+  height: 72px;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted-color);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+#current-temp {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--muted-color);
+  font-size: 0.85rem;
+}
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to the Enugu Chamber of Commerce — supporting local businesses and driving community growth.">
+    <meta name="author" content="Chima Nnaji">
+    <title>Home | Enugu Chamber of Commerce</title>
+    <meta property="og:title" content="Home | Enugu Chamber of Commerce">
+    <meta property="og:description"
+        content="Welcome to the Enugu Chamber of Commerce — supporting local businesses and driving community growth.">
+    <meta property="og:image" content="https://chima-001.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://chima-001.github.io/wdd231/chamber/">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <link rel="stylesheet" href="styles/chamber-larger.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav-top">
+            <div class="header-left">
+                <img src="images/logo.webp" alt="Enugu Chamber logo" id="logo">
+                <div class="chamber-title">
+                    <span class="site-name">Enugu Chamber of Commerce</span>
+                    <span class="tagline">Building Business. Building Community.</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+            </div>
+        </div>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="dark-mode-btn" aria-label="Toggle dark mode">
+                <img src="images/night.svg" alt="theme toggle">
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img id="heroImg" src="images/hero.webp" alt="Enugu city skyline" loading="lazy">
+        <a href="join.html" class="cta-btn">Join the Chamber</a>
+    </section>
+
+    <main>
+        <h1>Home</h1>
+        <div class="home-grid">
+            <section class="events">
+                <h2>Current Events</h2>
+                <div class="event-card">
+                    <h3>Business Networking Night</h3>
+                    <p>📅 June 20, 2026</p>
+                    <p>📍 Heritage Hotels Enugu</p>
+                    <p>Join us for an evening of networking with leading business owners in Enugu State.</p>
+                </div>
+                <div class="event-card">
+                    <h3>SME Growth Workshop</h3>
+                    <p>📅 June 27, 2026</p>
+                    <p>📍 Eastern Tech Hub</p>
+                    <p>A workshop designed to help small businesses scale and access funding opportunities.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Wild Beaches Rafting Tour</h3>
+                    <p>📅 May 29 - August 12, 2026</p>
+                    <p>📍 Open Waters Rafting Company</p>
+                    <p>An unforgettable rafting tour experience across wild rivers and beaches within Nigeria.</p>
+                </div>
+            </section>
+
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <div class="weather-current">
+                    <img id="weather-icon" src="" alt="weather icon" width="80" height="80">
+                    <p id="current-temp"></p>
+                    <p id="weather-desc"></p>
+                    <p>Enugu, Nigeria</p>
+                </div>
+                <h2>Weather Forecast</h2>
+                <div id="forecast"></div>
+            </section>
+        </div>
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p class="chamber-name">Enugu Chamber of Commerce</p>
+            <p>12 Independence Layout, Enugu-North</p>
+            <p>Enugu, Nigeria</p>
+            <p>info@enuguchamber.org</p>
+            <p>+234 705-899-3954</p>
+        </div>
+        <div class="social-links">
+            <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener">
+                <img src="images/youtube-1.svg" alt="YouTube logo">
+            </a>
+            <a href="https://x.com" aria-label="X" target="_blank" rel="noopener">
+                <img src="images/twitter-3.svg" alt="Twitter logo">
+            </a>
+            <a href="https://linkendin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img src="images/linkedin-square.svg" alt="LinkedIn logo">
+            </a>
+        </div>
+        <div class="footer-right">
+            <p>WDD 231 Class Project</p>
+            <p>Chimamkpam Nnaji</p>
+            <p>© <span id="copyright-year"></span> Enugu Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
