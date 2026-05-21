@@ -123,7 +123,7 @@ function displaySpotlights(members) {
 
     const site = document.createElement('a');
     site.href = member.website;
-    site.textContent = member.website;
+    site.textContent = 'View Details';
     site.target = '_blank';
     site.rel = 'noopener';
 
