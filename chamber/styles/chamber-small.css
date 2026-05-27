@@ -301,8 +301,8 @@ h1 {
 
 .member-card a:hover,
 .spotlight-card a:hover {
+  /*font-size: 0.87rem;*/
   color: var(--secondary-light);
-  font-size: 0.87rem;
 }
 
 .badge {
@@ -404,7 +404,7 @@ footer {
   font-weight: 700;
   font-size: 0.9rem;
   animation: pulse 1.5s infinite;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 @keyframes pulse {
@@ -595,11 +595,6 @@ footer {
     width: 45px;
     height: 45px;
   }
-
-  .member-card a:hover,
-  .spotlight-card a:hover {
-    font-size: 0.77rem;
-  }
 }
 
 
@@ -655,8 +650,4 @@ footer {
     height: 40px;
   }
 
-  .member-card a:hover,
-  .spotlight-card a:hover {
-    font-size: 0.72rem;
-  }
 }
