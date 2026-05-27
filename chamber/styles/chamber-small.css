@@ -26,7 +26,7 @@ body {
   color: var(--text);
   margin: 0;
   padding: 0;
-  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+  transition: background-color 0.5s ease;
 }
 
 body.dark {
@@ -228,10 +228,6 @@ h1 {
   justify-content: center;
 }
 
-/*#directory.grid::after {
-  content: "";
-  position: absolute;
-}*/
 
 #directory.list {
   gap: 0.75rem;
@@ -365,7 +361,7 @@ footer {
 
 .social-links a:hover img {
   opacity: 1;
-  width: 52px;
+  transform: scale(1.04);
   background-color: #0a3617;
   border-radius: 10%;
 }
@@ -380,8 +376,20 @@ footer {
   width: 100%;
   height: auto;
   display: block;
+  aspect-ratio: 21/12.8;
   max-height: 400px;
   object-fit: cover;
+}
+
+.hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .cta-btn {
@@ -401,7 +409,8 @@ footer {
 
 @keyframes pulse {
   50% {
-    background-color: var(--secondary-light);
+    transform: scale(1.02);
+    opacity: 0.75;
   }
 }
 
@@ -514,13 +523,6 @@ footer {
   margin: 0;
 }
 
-/*.spotlight-card p,
-.spotlight-card a {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin: 0;
-}*/
-
 .spotlight-card a {
   color: var(--text);
 }
@@ -592,10 +594,6 @@ footer {
   .social-links img {
     width: 45px;
     height: 45px;
-  }
-
-  .social-links a:hover img {
-    width: 47px;
   }
 
   .member-card a:hover,

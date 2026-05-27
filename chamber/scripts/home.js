@@ -5,6 +5,8 @@ const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&l
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
 async function getRandomHero() {
+  const hero = document.querySelector('.hero');
+
   const heroImg = document.querySelector('#heroImg');
 
   if (!heroImg) return;

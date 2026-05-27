@@ -236,3 +236,24 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+
+dialog{
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: var(--muted-color);
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+dialog button{
+    border: 1px solid rgb(0 0 0 / 10%);
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    padding: .5rem 1rem;
+}
+
+::backdrop{
+    background-color: rgb(0 0 0 / 50%);
+}
