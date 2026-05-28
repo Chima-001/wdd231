@@ -107,6 +107,8 @@ function displaySpotlights(members) {
     const card = document.createElement('div');
     card.classList.add('spotlight-card');
 
+    //card.style.animationDelay = `${index * 0.2}s`;
+
     const img = document.createElement('img');
     img.setAttribute('src', `images/${member.image}`);
     img.setAttribute('alt', member.name);

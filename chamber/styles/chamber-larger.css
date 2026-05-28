@@ -97,6 +97,19 @@
         flex: 1 1 calc(33% - 1rem);
         min-width: 200px;
     }
+
+    .join-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .join-form {
+        flex: 2;
+    }
+
+    .membership-cards {
+        flex: 1;
+    }
 }
 
 

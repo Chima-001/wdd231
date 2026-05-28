@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the Eunugu Chamber of Commerce and connect with local businesses driving community growth in Enugu State.">
+    <meta name="author" content="Chima Nnaji">
+    <title>Join | Enugu Chamber of Commerce</title>
+    <meta property="og:title" content="Home | Enugu Chamber of Commerce">
+    <meta property="og:description"
+        content="Join the Eunugu Chamber of Commerce and connect with local businesses driving community growth in Enugu State.">
+    <meta property="og:image" content="https://chima-001.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:url" content="https://chima-001.github.io/wdd231/chamber/index.html">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <link rel="stylesheet" href="styles/chamber-larger.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav-top">
+            <div class="header-left">
+                <img src="images/logo.webp" alt="Enugu Chamber logo" id="logo">
+                <div class="chamber-title">
+                    <span class="site-name">Enugu Chamber of Commerce</span>
+                    <span class="tagline">Building Business. Building Community.</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+            </div>
+        </div>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="current"><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="dark-mode-btn" aria-label="Toggle dark mode">
+                <img src="images/night.svg" alt="theme toggle">
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Join the Chamber</h1>
+        <div class="join-container">
+            <form action="thankyou.html" method="get" class="join-form">
+                <label>
+                    First Name
+                    <input type="text" name="firstname" title="Enter your first name" required autocomplete="given-name"
+                        placeholder="John">
+                </label>
+                <label>
+                    Last Name
+                    <input type="text" name="lastname" title="Enter your last name" required autocomplete="family-name"
+                        placeholder="Doe">
+                </label>
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgtitle"
+                        title="Enter your title within your organization (min 7 characters, letters, hyphens, spaces only)"
+                        autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}"
+                        placeholder="e.g. Managing Director">
+                </label>
+                <label>
+                    Email Address
+                    <input type="email" name="email" title="Enter a valid email address" required autocomplete="email"
+                        placeholder="example@domain.com">
+                </label>
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" title="Enter your mobile phone number" required autocomplete="tel"
+                        placeholder="+234 800 000 0000">
+                </label>
+                <label>
+                    Business / Organization Name
+                    <input type="text" name="organization" title="Enter your business or organization name" required
+                        autocomplete="organization" placeholder="Your Business Name">
+                </label>
+                <label>
+                    Membership Level
+                    <select name="membership" title="Select a membership level">
+                        <option value="">-- Select a level --</option>
+                        <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label>
+                    Business Description
+                    <textarea name="description" title="Briefly describe your business or organization" rows="4"
+                        placeholder="Tell us about your business..."></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Become a member">
+            </form>
+            <div class="membership-cards">
+                <div class="membership-card np-card">
+                    <h2>NP Membership</h2>
+                    <p>For non-profit organizations</p>
+                    <p class="fee">No Fee</p>
+                    <a href="#" class="learn-more" data-modal="modal-np">Learn More</a>
+                </div>
+                <div class="membership-card bronze-card">
+                    <h2>Bronze Membership</h2>
+                    <p>For small businesses</p>
+                    <p class="fee">₦50,000/yr</p>
+                    <a href="#" class="learn-more" data-modal="modal-bronze">Learn More</a>
+                </div>
+                <div class="membership-card silver-card">
+                    <h2>Silver Membership</h2>
+                    <p>For growing businesses</p>
+                    <p class="fee">₦120,000/yr</p>
+                    <a href="#" class="learn-more" data-modal="modal-silver">Learn More</a>
+                </div>
+                <div class="membership-card gold-card">
+                    <h2>Gold Membership</h2>
+                    <p>For established businesses</p>
+                    <p class="fee">₦250,000/yr</p>
+                    <a href="#" class="learn-more" data-modal="modal-gold">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <dialog id="modal-np">
+        <h2>NP Membership Benefits</h2>
+        <ul>
+            <li>Chamber directory listing</li>
+            <li>Access to networking events</li>
+            <li>Monthly newsletter</li>
+            <li>Community outreach support</li>
+        </ul>
+        <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="modal-bronze">
+        <h2>Bronze Membership Benefits</h2>
+        <ul>
+            <li>All NP benefits</li>
+            <li>10% discount on chamber events</li>
+            <li>Business profile on website</li>
+            <li>Access to training workshops</li>
+        </ul>
+        <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="modal-silver">
+        <h2>Silver Membership Benefits</h2>
+        <ul>
+            <li>All Bronze benefits</li>
+            <li>25% discount on chamber events</li>
+            <li>Social media features monthly</li>
+            <li>Priority event registration</li>
+            <li>SME funding referrals</li>
+        </ul>
+        <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="modal-gold">
+        <h2>Gold Membership Benefits</h2>
+        <ul>
+            <li>All Silver benefits</li>
+            <li>Spotlight on chamber home page</li>
+            <li>Free event advertising</li>
+            <li>VIP access to all chamber events</li>
+            <li>Dedicated business advisor</li>
+            <li>Annual awards recognition</li>
+        </ul>
+        <button class="close-modal">Close</button>
+    </dialog>
+
+    <footer>
+        <div class="footer-left">
+            <p class="chamber-name">Enugu Chamber of Commerce</p>
+            <p>12 Independence Layout, Enugu-North</p>
+            <p>Enugu, Nigeria</p>
+            <p>info@enuguchamber.org</p>
+            <p>+234 705-899-3954</p>
+        </div>
+        <div class="social-links">
+            <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener">
+                <img src="images/youtube-1.svg" alt="YouTube logo">
+            </a>
+            <a href="https://x.com" aria-label="X" target="_blank" rel="noopener">
+                <img src="images/twitter-3.svg" alt="Twitter logo">
+            </a>
+            <a href="https://linkendin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img src="images/linkedin-square.svg" alt="LinkedIn logo">
+            </a>
+        </div>
+        <div class="footer-right">
+            <p>WDD 231 Class Project</p>
+            <p>Chimamkpam Nnaji</p>
+            <p>© <span id="copyright-year"></span> Enugu Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
