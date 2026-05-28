@@ -66,7 +66,6 @@ async function getForecast() {
 function displayForecast(data) {
   const container = document.querySelector('#forecast');
   if (!container) return;
-  //container.innerHTML = '';
   const days = {};
 
   data.list.forEach(item => {
@@ -101,13 +100,10 @@ async function getSpotlights() {
 function displaySpotlights(members) {
   const container = document.querySelector('#spotlights');
   if (!container) return;
-  //container.innerHTML = '';
 
   members.forEach(member => {
     const card = document.createElement('div');
     card.classList.add('spotlight-card');
-
-    //card.style.animationDelay = `${index * 0.2}s`;
 
     const img = document.createElement('img');
     img.setAttribute('src', `images/${member.image}`);
