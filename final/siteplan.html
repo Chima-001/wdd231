@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Site plan for The Lost Atlas — a web project exploring history's most fascinating lost and ancient cities.">
+    <meta name="author" content="Chimamkpam Nnaji">
+    <title>Site Plan | The Lost Atlas</title>
+    <meta property="og:title" content="Site Plan | The Lost Atlas">
+    <meta property="og:description"
+        content="Site plan for The Lost Atlas — a web project exploring history's most fascinating lost and ancient cities.">
+    <meta property="og:image" content="https://chima-001.github.io/wdd231/final/images/logo.webp">
+    <meta property="og:url" content="https://chima-001.github.io/wdd231/final/siteplan.html">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>The Lost Atlas</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><span class="label">Name:</span> The Lost Atlas</p>
+            <p>The name combines "Lost," which represents forgotten civilizations and hidden histories with "Atlas,"
+                which evokes maps, exploration, and a comprehensive reference guide. Together the name positions the
+                site as the guide for exploring history's vanished cities. It is concise, memorable, and
+                immediately communicates the purpose of the site.</p>
+            <p><span class="label">Optional domain:</span> thelostAtlas.com</p>
+        </section>
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The Lost Atlas is an interactive reference site dedicated to exploring the world's most fascinating lost
+                and ancient cities. The site provides users with a searchable, filterable directory of 20+ lost cities,
+                each with details on their civilization of origin, geographic location, discovery year, current
+                archaeological status, and the mystery surrounding their disappearance.</p>
+            <p>Users can explore individual city profiles through immersive modal dialogs, view each city's coordinates
+                on an embedded map, bookmark cities using local storage, and filter the directory by civilization,
+                region, or era. The site also includes a nomination form allowing users to suggest undiscovered or
+                lesser-known sites for consideration.</p>
+        </section>
+        <section>
+            <h2>Scenarios</h2>
+            <p>These are questions a typical visitor to The Lost Atlas might ask:</p>
+            <ul>
+                <li>Which ancient civilizations built the most mysterious lost cities, and what do we know about their
+                    disappearance?</li>
+                <li>I want to explore lost cities by region — how can I find cities located specifically in South
+                    America or the Middle East?</li>
+                <li>What is the current archaeological status of Petra — is it still being excavated, or is it fully
+                    discovered?</li>
+                <li>I heard about a lost city I would like to suggest — how can I submit it to be added to the atlas?
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Color Scheme</h2>
+            <p>The palette draws from volcanic rock, desert sand, ancient gold, jungle moss, and sandstone — evoking
+                mystery, history, and discovery.</p>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="swatch-block" id="swatch-1"></div>
+                    <div class="swatch-info">
+                        <p class="swatch-name">Volcanic Black</p>
+                        <p class="swatch-hex">#111008</p>
+                        <p class="swatch-use">Page background</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-block" id="swatch-2"></div>
+                    <div class="swatch-info">
+                        <p class="swatch-name">Desert Earth</p>
+                        <p class="swatch-hex">#2a2115</p>
+                        <p class="swatch-use">Cards, surfaces</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-block" id="swatch-3"></div>
+                    <div class="swatch-info">
+                        <p class="swatch-name">Artifact Gold</p>
+                        <p class="swatch-hex">#c9a84c</p>
+                        <p class="swatch-use">Headings, accents, links</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-block" id="swatch-4"></div>
+                    <div class="swatch-info">
+                        <p class="swatch-name">Parchment</p>
+                        <p class="swatch-hex">#e8e6e1</p>
+                        <p class="swatch-use">Body text</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-block" id="swatch-5"></div>
+                    <div class="swatch-info">
+                        <p class="swatch-name">Terracotta</p>
+                        <p class="swatch-hex">#8b4513</p>
+                        <p class="swatch-use">Borders, highlights</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-block" id="swatch-6"></div>
+                    <div class="swatch-info">
+                        <p class="swatch-name">Jungle Moss</p>
+                        <p class="swatch-hex">#4d5e45</p>
+                        <p class="swatch-use">Tags, badges</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-block" id="swatch-7"></div>
+                    <div class="swatch-info">
+                        <p class="swatch-name">Faded Sandstone</p>
+                        <p class="swatch-hex">#b5a886</p>
+                        <p class="swatch-use">Muted text, borders</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Typography</h2>
+            <div class="font-example">
+                <p class="label">Cinzel — Headings, Site Name, Navigation</p>
+                <p class="font-cinzel">The Lost Atlas</p>
+                <p class="font-note">Historical, classical serif — evokes ancient inscriptions and map cartography</p>
+            </div>
+            <div class="font-example">
+                <p class="label">Raleway — Body Text, Descriptions, UI Elements</p>
+                <p class="font-raleway">Petra, carved into rose-red cliffs in southern Jordan, was the capital of the
+                    Nabataean Kingdom and one of the most remarkable archaeological sites in the world.</p>
+                <p class="font-note">Clean, modern sans-serif — readable, elegant, pairs well with Cinzel</p>
+            </div>
+        </section>
+        <section>
+            <h2>Wireframes</h2>
+            <h3>Home Page</h3>
+            <div class="wireframe-pair">
+                <figure>
+                    <img src="images/wireframe-mobile.jpg" alt="Home page mobile wireframe">
+                    <figcaption>Mobile View</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/wireframe-desktop.jpg" alt="Home page desktop wireframe">
+                    <figcaption>Desktop/Tablet View</figcaption>
+                </figure>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> • Chimamkpam Nnaji • The Lost Atlas • Nigeria</p>
+        <p>WDD 231 • BYU-Pathway Worldwide</p>
+        <p><a href="references.html">References</a></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
