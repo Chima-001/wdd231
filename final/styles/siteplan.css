@@ -232,3 +232,11 @@ footer {
     color: var(--muted);
     font-size: 0.85rem;
 }
+
+.ref a{
+    color: var(--text);
+}
+
+.ref a:hover{
+    color: var(--moss);
+}
