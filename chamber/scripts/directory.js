@@ -14,8 +14,11 @@ async function getMembers() {
 
 const displayMembers = (members) => {
   if (!container) return;
-  members.forEach((member) => {
+  
+  members.forEach((member, index) => {
     const card = document.createElement('div');
+    card.style.animationDelay = `${index * 0.15}s`;
+
     const name = document.createElement('h2');
     const address = document.createElement('p');
     const phone = document.createElement('p');
@@ -41,7 +44,7 @@ const displayMembers = (members) => {
     const levels = { 1: 'Regular', 2: 'Silver', 3: 'Gold' };
     badge.textContent = `${levels[member.membershipLevel]} Member`;
     badge.classList.add('badge', `level-${member.membershipLevel}`);
-
+    
     card.classList.add('member-card');
     card.appendChild(img);
     card.appendChild(name);
@@ -49,7 +52,7 @@ const displayMembers = (members) => {
     card.appendChild(phone);
     card.appendChild(site);
     card.appendChild(badge);
-
+    
     container.appendChild(card);
   });
 };
@@ -64,7 +67,7 @@ if (container && gridBtn && listBtn) {
     gridBtn.classList.add('active-view');
     listBtn.classList.remove('active-view');
   }
-
+  
   gridBtn.addEventListener('click', () => {
     container.classList.add('grid');
     container.classList.remove('list');

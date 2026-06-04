@@ -6,7 +6,6 @@ const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}
 
 async function getRandomHero() {
   const hero = document.querySelector('.hero');
-
   const heroImg = document.querySelector('#heroImg');
 
   if (!heroImg) return;
@@ -101,8 +100,9 @@ function displaySpotlights(members) {
   const container = document.querySelector('#spotlights');
   if (!container) return;
 
-  members.forEach(member => {
+  members.forEach((member, index) => {
     const card = document.createElement('div');
+    card.style.animationDelay = `${index * 0.2}s`;
     card.classList.add('spotlight-card');
 
     const img = document.createElement('img');

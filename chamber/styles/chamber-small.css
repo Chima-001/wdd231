@@ -274,7 +274,7 @@ h1 {
     display: none;
 }
 
-#directory.list .member-card h2{
+#directory.list .member-card h2 {
     color: var(--heading-2);
 }
 
@@ -526,6 +526,15 @@ footer {
     color: var(--text);
 }
 
+.member-card,
+.spotlight-card,
+.event-card,
+.weather-current,
+#forecast {
+    opacity: 0;
+    animation: cardReveal 0.6s ease forwards;
+}
+
 .join-container {
     display: flex;
     flex-direction: column;
@@ -726,6 +735,284 @@ dialog ul li {
 
 .thankyou-details h2 {
     font-size: 1.2rem;
+}
+
+
+.visitor-msg {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: 1rem;
+}
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card7 {
+    grid-area: card7;
+}
+
+.card8 {
+    grid-area: card8;
+}
+
+.place-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    animation: cardReveal 0.6s ease forwards;
+    min-width: 0;
+}
+
+.place-card h2 {
+    font-size: 1rem;
+    color: var(--heading);
+    margin: 0;
+}
+
+.place-card figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.place-card figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    max-width: 100%;
+}
+
+/*.place-card figure img {
+    transition: filter 0.3s ease, transform 0.3s ease;
+}*/
+
+.place-card figure img:hover {
+    filter: sepia(0.4) brightness(1.15);
+    transform: scale(1.04);
+}
+
+.card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 2.5s ease-in-out;
+}
+
+.card-img.fade-out {
+    opacity: 0;
+}
+
+.card-img.next-img {
+    opacity: 0;
+}
+
+.place-card address {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.place-card p {
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.place-card button {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    align-self: flex-start;
+}
+
+.place-card button:hover {
+    background-color: var(--secondary-light);
+    color: #000000;
+}
+
+#place-modal {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 500px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text);
+    position: relative;
+    animation: modalReveal 0.3s ease forwards;
+    position: fixed;
+}
+
+.modal-content {
+    /*background: rgba(255, 255, 255, 0.15);*/
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+    background: rgba(30, 30, 30, 0.3);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 30px;
+    width: 100%;
+}
+
+@keyframes modalReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+#place-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#place-modal img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#place-modal h2 {
+    color: var(--secondary-light);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#place-modal address {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #ddd8ce;
+    margin-bottom: 0.5rem;
+}
+
+.modal-hours {
+    font-size: 0.85rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    background: none;
+}
+
+#place-modal p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+#place-modal a {
+    color: var(--secondary-light);
+    font-size: 0.85rem;
+    word-break: break-all;
+    ;
+}
+
+#modal-map {
+    margin-top: 1rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ffffff;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+    background: rgba(255, 255, 255, 255, 0.05);
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.2s ease;
+}
+
+
+.modal-close-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 255, 0.3);
+}
+
+.modal-close-btn:active {
+    transform: scale(0.95);
 }
 
 

@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for applying to join the Enugu Chamber of Commerce.">
-    <meta name="author" content="Chima Nnaji">
-    <title>Thank You | Enugu Chamber of Commerce</title>
+    <meta name="description"
+        content="Discover the best places to visit and explore in Enugu, Nigeria — brought to you by the Enugu Chamber of Commerce.">
+    <meta name="author" content="Chimamkpam Nnaji">
+    <title>Discover | Enugu Chamber of Commerce</title>
+    <meta property="og:title" content="Discover | Enugu Chamber of Commerce">
+    <meta property="og:description" content="Discover the best places to visit and explore in Enugu, Nigeria.">
+    <meta property="og:image" content="https://chima-001.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:url" content="https://chima-001.github.io/wdd231/chamber/discover.html">
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +20,7 @@
     <link rel="stylesheet" href="styles/chamber-small.css">
     <link rel="stylesheet" href="styles/chamber-larger.css">
     <script src="scripts/directory.js" defer></script>
-    <script src="scripts/thankyou.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
 </head>
 
 <body>
@@ -36,8 +41,8 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li class="current"><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li class="current"><a href="discover.html">Discover</a></li>
             </ul>
             <button id="dark-mode-btn" aria-label="Toggle dark mode">
                 <img src="images/night.svg" alt="theme toggle">
@@ -45,7 +50,9 @@
         </nav>
     </header>
     <main>
-        
+        <h1>Discover Enugu</h1>
+        <p id="visitor-msg" class="visitor-msg"></p>
+        <div class="discover-grid" id="discover-grid"></div>
     </main>
     <footer>
         <div class="footer-left">
@@ -73,6 +80,20 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+
+    <dialog id="place-modal">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
+            <img id="modal-img" src="" alt="">
+            <h2 id="modal-name"></h2>
+            <address id="modal-address"></address>
+            <p id="modal-desc"></p>
+            <p class="modal-hours"><strong>Hours:</strong> <span id="modal-hours"></span></p>
+            <p><strong>Website:</strong> <a id="modal-link" href="" target="_blank" rel="noopener"></a></p>
+            <div id="modal-map"></div>
+        </div>
+    </dialog>
+
 </body>
 
 </html>

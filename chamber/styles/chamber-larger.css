@@ -59,7 +59,17 @@
         align-items: center;
         padding: 2rem;
     }
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "card1 card1 card2 card3"
+            "card4 card5 card6 card6"
+            "card7 card7 card8 card8";
+    }
 }
+
+
 
 
 @media (min-width: 640px) {
@@ -110,6 +120,16 @@
     .membership-cards {
         flex: 1;
     }
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card4 card5"
+            "card6 card7 card8";
+    }
+
+
 }
 
 
