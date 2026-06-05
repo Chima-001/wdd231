@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles/chamber-small.css">
     <link rel="stylesheet" href="styles/chamber-larger.css">
     <script src="scripts/directory.js" defer></script>
-    <script type="module" src="scripts/discover.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
 </head>
 
 <body>
@@ -82,16 +82,14 @@
     </footer>
 
     <dialog id="place-modal">
-
-            <button id="modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
-            <img id="modal-img" src="" alt="">
-            <h2 id="modal-name"></h2>
-            <address id="modal-address"></address>
-            <p class="modal-hours"><strong>Hours:</strong> <span id="modal-hours"></span></p>
-            <p id="modal-desc"></p>
-            <p><strong>Website:</strong> <a id="modal-link" href="" target="_blank" rel="noopener"></a></p>
-            <div id="modal-map"></div>
-  
+        <button id="modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
+        <img id="modal-img" src="#" alt="Place image">
+        <h2 id="modal-name">Place Details</h2>
+        <address id="modal-address"></address>
+        <p class="modal-hours"><strong>Hours:</strong> <span id="modal-hours"></span></p>
+        <p id="modal-desc"></p>
+        <p><strong>Website:</strong> <a id="modal-link" href="#" target="_blank" rel="noopener">Visit Website</a></p>
+        <div id="modal-map"></div>
     </dialog>
 
 </body>

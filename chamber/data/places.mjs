@@ -66,10 +66,10 @@ export const places = [
         lng: 7.5100
     },
     {
-        name: "Milken Hills",
+        name: "Milliken Hills",
         address: "Ogui Nike, Enugu, Nigeria",
         description: "Scenic hilltop offering sweeping views of Enugu city. A favorite spot for photography, sunrise viewing, and outdoor fitness activities.",
-        extendedDescription: "Milken Hills rises above the Enugu cityscape offering some of the most dramatic panoramic views in the state. At sunrise and sunset the sky transforms into a canvas of colors visible from the summit. The hill is a popular destination for joggers, fitness enthusiasts, bird watchers, and photographers seeking unique aerial perspectives of the Coal City.",
+        extendedDescription: "Milliken Hills rises above the Enugu cityscape offering some of the most dramatic panoramic views in the state. At sunrise and sunset the sky transforms into a canvas of colors visible from the summit. The hill is a popular destination for joggers, fitness enthusiasts, bird watchers, and photographers seeking unique aerial perspectives of the Coal City.",
         images: [
             "images/milken-hills2.webp",
             "images/milken-hills.webp",

@@ -930,6 +930,7 @@ dialog ul li {
     border-radius: 6px;
     display: block;
     margin-bottom: 1rem;
+    border-radius: 20px;
 }
 
 #place-modal h2 {
@@ -963,7 +964,10 @@ dialog ul li {
     color: var(--secondary-light);
     font-size: 0.85rem;
     word-break: break-all;
-    ;
+}
+
+#place-modal a:hover{
+    font-weight: bold;
 }
 
 #modal-map {
@@ -976,8 +980,6 @@ dialog ul li {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
-    background: none;
-    border: none;
     font-size: 1.2rem;
     cursor: pointer;
     color: #ffffff;
@@ -987,8 +989,7 @@ dialog ul li {
     place-items: center;
     border-radius: 50%;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-
-    background: rgba(255, 255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px) saturate(160%);
     -webkit-backdrop-filter: blur(16px) saturate(160%);
     border: 1px solid rgba(255, 255, 255, 0.3);

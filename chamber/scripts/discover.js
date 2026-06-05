@@ -80,7 +80,7 @@ document.querySelectorAll('.learn-more-btn').forEach(btn => {
         document.querySelector('#modal-hours').textContent = place.hours;
         document.querySelector('#modal-desc').textContent = place.extendedDescription;
         document.querySelector('#modal-link').href = place.website;
-        document.querySelector('#modal-link').textContent = place.website;
+        document.querySelector('#modal-link').textContent = `Visit ${place.name}`;
 
         const mapContainer = document.querySelector('#modal-map');
         mapContainer.innerHTML = '';
