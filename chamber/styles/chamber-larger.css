@@ -129,8 +129,13 @@
             "card6 card7 card8";
     }
 
-
+    .place-card figure img:hover {
+        filter: sepia(0.4) brightness(1.15);
+        transform: scale(1.04);
+    }
 }
+
+
 
 
 @media (min-width: 501px) and (max-width: 639px) {

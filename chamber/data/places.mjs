@@ -2,7 +2,8 @@ export const places = [
     {
         name: "Nike Lake Resort",
         address: "Nike Lake Road, Enugu, Nigeria",
-        description: "Nike Lake Resort is spread across several hectares of lush greenery surrounding the serene Nike Lake. Facilities include a full-service hotel, outdoor swimming pools, beach volleyball courts, jet ski rentals, and multiple restaurants serving local and continental cuisine. It is a favorite for corporate retreats, weddings, and weekend getaways.",
+        description: "A stunning lakeside resort offering boat rides, swimming, and panoramic views of Nike Lake. One of Enugu's premier destinations for relaxation and recreation.",
+        extendedDescription: "Nike Lake Resort is spread across several hectares of lush greenery surrounding the serene Nike Lake. Facilities include a full-service hotel, outdoor swimming pools, beach volleyball courts, jet ski rentals, and multiple restaurants serving local and continental cuisine. It is a favorite for corporate retreats, weddings, and weekend getaways.",
         images: [
             "images/nike-lake1.webp",
             "images/nike-lake.webp",
@@ -17,7 +18,8 @@ export const places = [
     {
         name: "Ngwo Pine Forest",
         address: "Ngwo, Enugu State, Nigeria",
-        description: "Ngwo Pine Forest is one of southeastern Nigeria's most beloved natural escapes. The forest features well-marked hiking trails through towering pine trees, natural caves, and a crystal-clear stream. The cool highland climate makes it ideal year-round. Local guides are available at the entrance for a more immersive forest experience.",
+        description: "A serene pine forest retreat located in the Ngwo hills. Popular for hiking, picnics, and nature walks with cool highland temperatures year-round.",
+        extendedDescription: "Ngwo Pine Forest is one of southeastern Nigeria's most beloved natural escapes. The forest features well-marked hiking trails through towering pine trees, natural caves, and a crystal-clear stream. The cool highland climate makes it ideal year-round. Local guides are available at the entrance for a more immersive forest experience.",
         images: [
             "images/ngwo-forest1.webp",
             "images/ngwo-forest.webp",
@@ -31,7 +33,8 @@ export const places = [
     {
         name: "Awhum Waterfall",
         address: "Awhum, Udi LGA, Enugu State, Nigeria",
-        description: "Awhum Waterfall is a spectacular natural wonder situated near the Awhum Benedictine Monastery. The falls cascade down ancient rock formations into a pool below, surrounded by dense tropical vegetation. The site holds both spiritual and cultural significance for the local community. The monastery beside it welcomes pilgrims and tourists alike.",
+        description: "A breathtaking waterfall nestled near a Benedictine monastery. Visitors come for the natural beauty, spiritual atmosphere, and refreshing mist.",
+        extendedDescription: "Awhum Waterfall is a spectacular natural wonder situated near the Awhum Benedictine Monastery. The falls cascade down ancient rock formations into a pool below, surrounded by dense tropical vegetation. The site holds both spiritual and cultural significance for the local community. The monastery beside it welcomes pilgrims and tourists alike.",
         images: [
             "images/awhum-waterfall.webp",
             "images/awhum-waterfall1.webp",
@@ -47,7 +50,8 @@ export const places = [
     {
         name: "Enugu State Zoo",
         address: "GRA, Enugu, Nigeria",
-        description: "The Enugu State Zoo is one of the oldest wildlife conservation facilities in southeastern Nigeria. It is home to over 50 species of animals including African lions, Nile crocodiles, pythons, baboons, and a variety of tropical birds. The zoo also runs an educational outreach program for schools promoting wildlife conservation and environmental awareness.",
+        description: "Home to a diverse collection of wildlife including lions, crocodiles, and exotic birds. A great educational outing for families and school groups.",
+        extendedDescription: "The Enugu State Zoo is one of the oldest wildlife conservation facilities in southeastern Nigeria. It is home to over 50 species of animals including African lions, Nile crocodiles, pythons, baboons, and a variety of tropical birds. The zoo also runs an educational outreach program for schools promoting wildlife conservation and environmental awareness.",
         images: [
             "images/enugu-zoo.webp",
             "images/enugu-zoo1.webp",
@@ -64,7 +68,8 @@ export const places = [
     {
         name: "Milken Hills",
         address: "Ogui Nike, Enugu, Nigeria",
-        description: "Milken Hills rises above the Enugu cityscape offering some of the most dramatic panoramic views in the state. At sunrise and sunset the sky transforms into a canvas of colors visible from the summit. The hill is a popular destination for joggers, fitness enthusiasts, bird watchers, and photographers seeking unique aerial perspectives of the Coal City.",
+        description: "Scenic hilltop offering sweeping views of Enugu city. A favorite spot for photography, sunrise viewing, and outdoor fitness activities.",
+        extendedDescription: "Milken Hills rises above the Enugu cityscape offering some of the most dramatic panoramic views in the state. At sunrise and sunset the sky transforms into a canvas of colors visible from the summit. The hill is a popular destination for joggers, fitness enthusiasts, bird watchers, and photographers seeking unique aerial perspectives of the Coal City.",
         images: [
             "images/milken-hills2.webp",
             "images/milken-hills.webp",
@@ -79,7 +84,8 @@ export const places = [
     {
         name: "Polo Park Mall",
         address: "Polo Park, GRA, Enugu, Nigeria",
-        description: "Polo Park Mall is the commercial heartbeat of Enugu. Spread across multiple floors, the mall houses over 100 retail outlets including fashion, electronics, supermarkets, and lifestyle stores. The food court serves diverse cuisines, while the multiplex cinema screens the latest local and international films. A dedicated children's play area and arcade make it a complete family destination.",
+        description: "Enugu's largest shopping and entertainment complex. Features retail stores, restaurants, a cinema, and family entertainment zones under one roof.",
+        extendedDescription: "Polo Park Mall is the commercial heartbeat of Enugu. Spread across multiple floors, the mall houses over 100 retail outlets including fashion, electronics, supermarkets, and lifestyle stores. The food court serves diverse cuisines, while the multiplex cinema screens the latest local and international films. A dedicated children's play area and arcade make it a complete family destination.",
         images: [
             "images/polo-park3.webp",
             "images/polo-park.webp",
@@ -97,7 +103,8 @@ export const places = [
     {
         name: "Coal Camp Heritage Area",
         address: "Coal Camp, Enugu, Nigeria",
-        description: "Coal Camp is where the story of Enugu truly began. Established during the colonial era to house workers of the Udi Coal Mine, the area retains much of its original character through preserved buildings, narrow streets, and a strong community identity. The heritage trail here takes visitors through the history of coal mining in Nigeria and its role in shaping modern Enugu.",
+        description: "The historic heart of Enugu's coal mining legacy. Explore the cultural roots of the city through its preserved colonial-era buildings and community history.",
+        extendedDescription: "Coal Camp is where the story of Enugu truly began. Established during the colonial era to house workers of the Udi Coal Mine, the area retains much of its original character through preserved buildings, narrow streets, and a strong community identity. The heritage trail here takes visitors through the history of coal mining in Nigeria and its role in shaping modern Enugu.",
         images: [
             "images/coal-camp.webp",
             "images/coal-camp1.webp",
@@ -114,7 +121,8 @@ export const places = [
     {
         name: "Trans-Ekulu Park",
         address: "Trans-Ekulu, Enugu, Nigeria",
-        description: "Trans-Ekulu Park is a beautifully landscaped green space in one of Enugu's most organized residential districts. The park features jogging and cycling paths, manicured lawns, children's play equipment, basketball courts, and shaded seating areas. It serves as a community hub where residents gather for morning exercise, evening leisure, and weekend social activities.",
+        description: "A well-maintained recreational park in the Trans-Ekulu district. Features walking trails, green spaces, and sports facilities enjoyed by residents and visitors alike.",
+        extendedDescription: "Trans-Ekulu Park is a beautifully landscaped green space in one of Enugu's most organized residential districts. The park features jogging and cycling paths, manicured lawns, children's play equipment, basketball courts, and shaded seating areas. It serves as a community hub where residents gather for morning exercise, evening leisure, and weekend social activities.",
         images: [
             "images/trans-ekulu.webp",
             "images/trans-ekulu1.webp",

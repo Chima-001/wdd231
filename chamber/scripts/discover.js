@@ -19,10 +19,18 @@ places.forEach((place, index) => {
 <img src="${randomImg}" alt="${place.name}" loading="lazy" width="300" height="200" class="card-img">
 </figure>
 <address>${place.address}</address>
+<p>${place.description}</p>
 <button type="button" class="learn-more-btn" data-index="${index}">Learn More</button>
 `;
 
     grid.appendChild(card);
+
+    const img = card.querySelector('.card-img');
+    if (index === 0) {
+        img.removeAttribute('loading');
+        img.setAttribute('fetchpriority', 'high');
+    }
+
     startImageShuffle(card, place.images);
 });
 
@@ -35,16 +43,6 @@ function startImageShuffle(cardElement, imagesArray) {
 
     const intervalId = setInterval(() => {
         currentIndex = (currentIndex + 1) % imagesArray.length;
-
-        /*const nextImg = new Image();
-        nextImg.onload = () => {
-            img.src = nextImg.src;
-            };
-            nextImg.src = imagesArray[currentIndex];
-            }, 5000);
-            
-            activeIntervals.set(cardElement, intervalId);
-            */
         const nextImg = document.createElement('img');
         nextImg.src = imagesArray[currentIndex];
         nextImg.alt = img.alt;
@@ -54,11 +52,8 @@ function startImageShuffle(cardElement, imagesArray) {
         nextImg.loading = 'lazy';
         figure.appendChild(nextImg);
 
-        //img.classList.add('fade-out');
-        //nextImg.classList.remove('next-img');
-
         requestAnimationFrame(() => {
-            requestAnimationFrame(() =>{
+            requestAnimationFrame(() => {
                 img.classList.add('fade-out');
                 nextImg.classList.remove('next-img');
             });
@@ -73,7 +68,6 @@ function startImageShuffle(cardElement, imagesArray) {
 
     activeIntervals.set(cardElement, intervalId);
 }
-//document.querySelectorAll('.place-card').forEach(card => observ)
 
 document.querySelectorAll('.learn-more-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -84,7 +78,7 @@ document.querySelectorAll('.learn-more-btn').forEach(btn => {
         document.querySelector('#modal-img').alt = place.name;
         document.querySelector('#modal-address').textContent = place.address;
         document.querySelector('#modal-hours').textContent = place.hours;
-        document.querySelector('#modal-desc').textContent = place.description;
+        document.querySelector('#modal-desc').textContent = place.extendedDescription;
         document.querySelector('#modal-link').href = place.website;
         document.querySelector('#modal-link').textContent = place.website;
 
@@ -100,14 +94,11 @@ document.querySelectorAll('.learn-more-btn').forEach(btn => {
         mapContainer.appendChild(iframe);
 
         modal.showModal();
-        //document.body.style.overflow ='hidden';
     });
 });
 
 modalClose.addEventListener('click', () => {
-    // e.preventDefault();
     modal.close();
-    //document.body.style.overflow ='';
     document.querySelector('#modal-map').innerHTML = '';
 });
 
