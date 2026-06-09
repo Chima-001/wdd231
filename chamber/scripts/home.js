@@ -96,6 +96,21 @@ async function getSpotlights() {
   }
 }
 
+function observeCards(selector) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(`${selector}:not(.visible)`).forEach(card => {
+        observer.observe(card);
+    });
+}
+
 function displaySpotlights(members) {
   const container = document.querySelector('#spotlights');
   if (!container) return;
@@ -141,8 +156,14 @@ function displaySpotlights(members) {
 
     container.appendChild(card);
   });
-}
+
+  observeCards('.spotlight-card');
+};
 
 if (document.querySelector('#current-temp')) getWeather();
 if (document.querySelector('#forecast')) getForecast();
 if (document.querySelector('#spotlights')) getSpotlights();
+
+observeCards('.event-card');
+observeCards('.weather-current');
+observeCards('#forecast');

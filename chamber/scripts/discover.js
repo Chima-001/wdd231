@@ -5,6 +5,21 @@ const modal = document.querySelector('#place-modal');
 const modalClose = document.querySelector('#modal-close');
 const activeIntervals = new Map();
 
+function observeCards(selector) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(`${selector}:not(.visible)`).forEach(card => {
+        observer.observe(card);
+    });
+}
+
 places.forEach((place, index) => {
     const card = document.createElement('article');
     card.classList.add('place-card', `card${index + 1}`);
@@ -33,6 +48,8 @@ places.forEach((place, index) => {
 
     startImageShuffle(card, place.images);
 });
+
+observeCards('.place-card');
 
 function startImageShuffle(cardElement, imagesArray) {
     if (imagesArray.length <= 1) return;

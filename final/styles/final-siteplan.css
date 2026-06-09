@@ -231,7 +231,7 @@ footer {
 }
 
 .ref a{
-    color: var(--text);
+    color: var(--accent);
 }
 
 .ref a:hover{

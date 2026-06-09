@@ -55,11 +55,11 @@ header span {
 }
 
 .hamburger::before {
-    content: "≣";
+    content: "\2630";
 }
 
 .hamburger.show::before {
-    content: "⨉";
+    content: "\2715";
 }
 
 

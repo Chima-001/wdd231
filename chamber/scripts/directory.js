@@ -6,6 +6,21 @@ const darkBtn = document.querySelector('#dark-mode-btn')
 const navButton = document.querySelector('#nav-button')
 const navBar = document.querySelector('#nav-bar')
 
+function observeCards(selector) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(`${selector}:not(.visible)`).forEach(card => {
+    observer.observe(card);
+  });
+}
+
 async function getMembers() {
   const response = await fetch(url);
   const data = await response.json();
@@ -14,7 +29,7 @@ async function getMembers() {
 
 const displayMembers = (members) => {
   if (!container) return;
-  
+
   members.forEach((member, index) => {
     const card = document.createElement('div');
     card.style.animationDelay = `${index * 0.15}s`;
@@ -44,7 +59,7 @@ const displayMembers = (members) => {
     const levels = { 1: 'Regular', 2: 'Silver', 3: 'Gold' };
     badge.textContent = `${levels[member.membershipLevel]} Member`;
     badge.classList.add('badge', `level-${member.membershipLevel}`);
-    
+
     card.classList.add('member-card');
     card.appendChild(img);
     card.appendChild(name);
@@ -52,9 +67,11 @@ const displayMembers = (members) => {
     card.appendChild(phone);
     card.appendChild(site);
     card.appendChild(badge);
-    
+
     container.appendChild(card);
   });
+
+  observeCards('.member-card');
 };
 
 if (container && gridBtn && listBtn) {
@@ -67,7 +84,7 @@ if (container && gridBtn && listBtn) {
     gridBtn.classList.add('active-view');
     listBtn.classList.remove('active-view');
   }
-  
+
   gridBtn.addEventListener('click', () => {
     container.classList.add('grid');
     container.classList.remove('list');

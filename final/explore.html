@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse and filter 20+ lost cities by region, era, and civilization. Click any city to explore its full story.">
+    <meta name="author" content="Chima Nnaji">
+    <title>Explore | The Lost Atlas</title>
+    <meta property="og:title" content="Explore | The Lost Atlas">
+    <meta property="og:description" content="Browse and filter 20+ lost cities by region, era, and civilization.">
+    <meta property="og:image" content="https://chima-001.github.io/wdd231/final/images/og-image.jpg">
+    <meta property="og:url" content="https://chima-001.github.io/wdd231/final/explore.html">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/final-small.css">
+    <link rel="stylesheet" href="styles/final-larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/explore.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="header-left">
+                <img src="images/logo.svg" alt="The Lost Atlas logo" id="logo">
+                <span class="site-name">The Lost Atlas</span>
+            </div>
+            <div class="header-right">
+                <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+                <button id="theme-btn" class="theme-btn" aria-label="Toggle theme mode">
+                    <img src="images/dark-mode.svg" alt="theme toggle">
+                </button>
+            </div>
+        </div>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="explore.html">Explore</a></li>
+                <li><a href="nominate.html">Nominate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout">
+        <div class="explore-header">
+            <h1>Explore Lost Cities</h1>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <label class="filter-label">
+                    Region
+                    <select id="region-select" aria-label="Filter by region">
+                        <option value="all">All Regions</option>
+                        <option value="Middle East">Middle East</option>
+                        <option value="South America">South America</option>
+                        <option value="Mediterranean">Mediterranean</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Central America">Central America</option>
+                        <option value="North America">North America</option>
+                    </select>
+                </label>
+                <label class="filter-label">
+                    Era
+                    <select id="era-select" aria-label="Filter by era">
+                        <option value="all">All Eras</option>
+                        <option value="Ancient">Ancient (before 500 AD)</option>
+                        <option value="Medieval">Medieval (500–1500 AD)</option>
+                        <option value="Early Modern">Early Modern (1500–1800 AD)</option>
+                    </select>
+                </label>
+                <label class="filter-label">
+                    Status
+                    <select id="status-select" aria-label="Filter by status">
+                        <option value="all">All Statuses</option>
+                        <option value="Excavated">Excavated</option>
+                        <option value="Partially Excavated">Partially Excavated</option>
+                        <option value="Undiscovered">Undiscovered</option>
+                        <option value="Mythical">Mythical</option>
+                    </select>
+                </label>
+            </div>
+
+            <p id="results-count"></p>
+        </div>
+
+        <div id="cities-grid" class="cities-grid"></div>
+    </main>
+
+    <dialog id="city-modal">
+        <button id="modal-close" class="modal-close-btn" aria-label="Close modal">&#x2715;</button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="" width="500" height="300" loading="lazy">
+            <h2 id="modal-name"></h2>
+            <div class="modal-meta">
+                <span id="modal-civilization"></span>
+                <span id="modal-region"></span>
+                <span id="modal-year"></span>
+                <span id="modal-status"></span>
+            </div>
+            <p id="modal-desc"></p>
+            <div id="modal-country-info" class="modal-country-info"></div>
+            <div id="modal-artifact" class="modal-artifact">
+                <h3 id="artifact-title"></h3>
+                <img id="artifact-img" src="" alt="" loading="lazy" width="200" height="150">
+                <p id="artifact-caption"></p>
+            </div>
+
+            <div id="modal-map"></div>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer-site-name">
+            <img src="images/logo.svg" alt="The lost atlas logo">
+            <span>The Lost Atlas</span>
+        </div>
+
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://youtube/placeholder" target="_blank" rel="noopener">Project Video</a>
+            </div>
+            <p>@thelostatlas.info.com</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener">
+                <img src="images/youtube-1.svg" alt="YouTube logo">
+            </a>
+            <a href="https://x.com" aria-label="X" target="_blank" rel="noopener">
+                <img src="images/twitter-3.svg" alt="Twitter logo">
+            </a>
+            <a href="https://linkendin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img src="images/linkedin-square.svg" alt="LinkedIn logo">
+            </a>
+        </div>
+
+        <div class="footer-right">
+            <p>WDD 231 Final Project</p>
+            <p> Chimamkpam Nnaji</p>
+            <p>© <span id="copyright-year"></span> • The Lost Atlas • Nigeria</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

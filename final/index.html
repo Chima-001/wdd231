@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Lost Atlas — explore history's most fascinating lost and ancient cities from around the world.">
+    <meta name="author" content="Chima Nnaji">
+    <title>Home | The Lost Atlas</title>
+    <meta property="og:title" content="Home | The Lost Atlas">
+    <meta property="og:description"
+        content="Explore history's most fascinating lost and ancient cities from around the world.">
+    <meta property="og:image" content="https://chima-001.github.io/wdd231/final/images/og-image.jpg">
+    <meta property="og:url" content="https://chima-001.github.io/wdd231/final/index.html">
+    <link rel="icon" href="images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/final-small.css">
+    <link rel="stylesheet" href="styles/final-larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/home.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="header-left">
+                <img src="images/logo.svg" alt="The Lost Atlas logo" id="logo">
+                <span class="site-name">The Lost Atlas</span>
+            </div>
+            <div class="header-right">
+                <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+                <button id="theme-btn" class="theme-btn" aria-label="Toggle theme mode">
+                    <img src="images/dark-mode.svg" alt="theme toggle">
+                </button>
+            </div>
+        </div>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="nominate.html">Nominate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay">
+                <h1>Discover the World's Lost Cities</h1>
+                <p>Countless civilizations. Untold mysteries. One atlas.</p>
+                <a href="explore.html" class="cta-btn">Explore the Atlas</a>
+            </div>
+            <img src="images/hero.webp" alt="Ancient ruins at sunset" id="hero-img" width="1200" height="600"
+                fetchpriority="high">
+        </section>
+        <section class="featured">
+            <h2>Featured Cities</h2>
+            <div id="featured-grid"></div>
+        </section>
+
+        <section class="about-teaser">
+            <div class="teaser-text">
+                <h2>What is The Lost Atlas?</h2>
+                <p>The Lost Atlas is a comprehensive reference guide to the world's most enigmatic vanished
+                    civilizations. From the desert-carved city of Petra to the mythical streets of El Dorado, each entry
+                    explores the history, mystery, and current archaeological status of cities that time forgot.</p>
+                <a href="explore.html" class="cta-btn-secondary">Explore All Cities</a>
+            </div>
+            <div class="teaser-image">
+                <img src="images/about-teaser.webp" alt="Archaeological excavation site" loading="lazy" width="600"
+                    height="400">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-site-name">
+            <img src="images/logo.svg" alt="The lost atlas logo">
+            <span>The Lost Atlas</span>
+        </div>
+
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://youtube/placeholder" target="_blank" rel="noopener">Project Video</a>
+            </div>
+            <p>@thelostatlas.info.com</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener">
+                <img src="images/youtube-1.svg" alt="YouTube logo">
+            </a>
+            <a href="https://x.com" aria-label="X" target="_blank" rel="noopener">
+                <img src="images/twitter-3.svg" alt="Twitter logo">
+            </a>
+            <a href="https://linkendin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <img src="images/linkedin-square.svg" alt="LinkedIn logo">
+            </a>
+        </div>
+
+        <div class="footer-right">
+            <p>WDD 231 Final Project</p>
+            <p> Chimamkpam Nnaji</p>
+            <p>© <span id="copyright-year"></span> • The Lost Atlas • Nigeria</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

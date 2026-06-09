@@ -19,20 +19,22 @@
         background: transparent;
         align-items: center;
         background-color: var(--primary);
+        overflow: none;
+        max-height: none;
     }
-
+    
     .navigation ul {
         height: 100%;
         align-items: center;
         flex-direction: row;
         display: flex;
     }
-
+    
     .navigation ul li a {
         border-bottom: none;
         white-space: nowrap;
     }
-
+    
     .navigation ul li a:hover {
         font-weight: normal;
     }
@@ -40,7 +42,7 @@
     #dark-mode-btn {
         position: static;
     }
-
+    
     #dark-mode-btn.hidden {
         display: flex;
     }
@@ -52,21 +54,21 @@
     #directory.list .membercard h2 {
         grid-column: 1 / -1;
     }
-
-    footer {
+    
+    /* footer {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         padding: 2rem;
-    }
-
+    } */
+    
     .discover-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "card1 card1 card2 card3"
+        "card1 card1 card2 card3"
             "card4 card5 card6 card6"
             "card7 card7 card8 card8";
-    }
+        }
 }
 
 
@@ -76,59 +78,60 @@
     .site-name {
         font-size: 1.4rem;
     }
-
+    
+    
     .tagline {
         font-size: 0.88rem;
     }
-
+    
     #dark-mode-btn {
         margin-right: 1rem;
     }
-
+    
     footer {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         padding: 2rem;
     }
-
+    
     .home-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
-
+    
     #spotlights {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
+    
     .spotlight-card {
         flex: 1 1 calc(33% - 1rem);
         min-width: 200px;
     }
-
+    
     .join-container {
         flex-direction: row;
         align-items: flex-start;
     }
-
+    
     .join-form {
         flex: 2;
     }
-
+    
     .membership-cards {
         flex: 1;
     }
-
+    
     .discover-grid {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-            "card1 card2 card3"
-            "card4 card4 card5"
-            "card6 card7 card8";
+        "card1 card2 card3"
+        "card4 card4 card5"
+        "card6 card7 card8";
     }
-
+    
     .place-card figure img:hover {
         filter: sepia(0.4) brightness(1.15);
         transform: scale(1.04);
@@ -143,6 +146,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    
     .member-card {
         display: grid;
         align-items: start;

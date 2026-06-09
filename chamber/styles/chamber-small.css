@@ -140,6 +140,13 @@ header {
 
 .navigation {
     background-color: #163d22;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease-out;
+}
+
+.navigation.show{
+    max-height: 500px;
 }
 
 .nav-top {
@@ -154,7 +161,6 @@ header {
 }
 
 .navigation ul {
-    display: none;
     flex-direction: column;
     list-style: none;
     margin: 0;
@@ -532,6 +538,13 @@ footer {
 .weather-current,
 #forecast {
     opacity: 0;
+}
+
+.member-card.visible,
+.spotlight-card.visible,
+.event-card.visible,
+.weather-current.visible,
+#forecast.visible {
     animation: cardReveal 0.6s ease forwards;
 }
 
@@ -599,8 +612,12 @@ footer {
     background-color: var(--surface);
     text-align: center;
     opacity: 0;
+}
+
+.membership-card.visible{
     animation: cardReveal 0.6s ease forwards;
 }
+
 
 .membership-card:nth-child(1) {
     animation-delay: 0.1s;
@@ -817,8 +834,11 @@ dialog ul li {
     gap: 0.5rem;
     box-shadow: var(--box-shadow);
     opacity: 0;
-    animation: cardReveal 0.6s ease forwards;
     min-width: 0;
+}
+
+.place-card.visible{
+    animation: cardReveal 0.6s ease forwards;
 }
 
 .place-card h2 {
