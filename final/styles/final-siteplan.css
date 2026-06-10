@@ -1,12 +1,12 @@
 :root {
     --bg: #111008;
     --surface: #2a2115;
-    --accent: #caa94f;
+    --accent: #dcb343;
     --text: #e8e6e1;
-    --muted: #b5a886;
+    --muted: #a3a3a2;
     --border: #3a2e1e;
     --earth: #8b4513;
-    --moss: #4d5e45;
+    --moss: #3b4a34;
 }
 
 * {
@@ -126,11 +126,11 @@ section ul li {
 }
 
 #swatch-6 {
-    background-color: #4d5e45;
+    background-color: #3b4a34;
 }
 
 #swatch-7 {
-    background-color: #b5a886;
+    background-color: #a3a3a2;
 }
 
 .swatch-info {
@@ -230,10 +230,10 @@ footer {
     font-size: 0.85rem;
 }
 
-.ref a{
+.ref a {
     color: var(--accent);
 }
 
-.ref a:hover{
+.ref a:hover {
     color: var(--moss);
 }

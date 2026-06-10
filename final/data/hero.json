@@ -1,0 +1,24 @@
+{
+    "heroAlt": "Ancient City Ruins",
+    "heroImages": [
+        "images/hero.webp",
+        "images/hero1.webp",
+        "images/hero2.webp",
+        "images/hero3.webp",
+        "images/hero4.webp",
+        "images/hero5.webp",
+        "images/hero6.webp",
+        "images/hero7.webp",
+        "images/hero8.webp",
+        "images/hero9.webp"
+    ],
+
+    "aboutTeaserAlt": "Archaeological excavation site",
+    "aboutTeaserImages": [
+        "images/about-teaser.webp",
+        "images/about-teaser1.webp",
+        "images/about-teaser2.webp",
+        "images/about-teaser3.webp",
+        "images/about-teaser4.webp"
+    ]
+}

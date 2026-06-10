@@ -55,7 +55,6 @@ function observeCards() {
         observer.observe(card);
     });
 }
-    //reveals.forEach(el => observer.observer(el));
 
 function filterAndDisplay() {
     const region = regionSelect.value;
@@ -101,8 +100,6 @@ async function openModal(city) {
 
     modal.showModal();
 
-
-    // Wikipedia API
     try {
         const wikiName = city.name.replace(/\s+/g, '_');
         const wikiResponse = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${wikiName}`);
@@ -114,7 +111,6 @@ async function openModal(city) {
         console.error('Wikipedia fetch failed:', error);
     }
 
-    // REST Countries API
     try {
         const countryName = city.country.split('/')[0].trim();
         if (countryName !== 'Unknown') {
@@ -137,7 +133,6 @@ async function openModal(city) {
         console.error('REST Countries fetch failed:', error);
     }
 
-    // Metropolitan Museum of Art API
     try {
         const searchResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${encodeURIComponent(city.civilization)}&hasImages=true`);
         const searchData = await searchResponse.json();
