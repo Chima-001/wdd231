@@ -19,7 +19,7 @@
         background: transparent;
         align-items: center;
         background-color: var(--primary);
-        overflow: none;
+        overflow: hidden;
         max-height: none;
     }
     
