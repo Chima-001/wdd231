@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Browse and filter 20+ lost cities by region, era, and civilization. Click any city to explore its full story.">
-    <meta name="author" content="Chima Nnaji">
+    <meta name="author" content="Chimamkpam Nnaji">
     <title>Explore | The Lost Atlas</title>
     <meta property="og:title" content="Explore | The Lost Atlas">
     <meta property="og:description" content="Browse and filter 20+ lost cities by region, era, and civilization.">
@@ -22,9 +22,11 @@
     <link rel="icon" href="images/logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+            rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/final-small.css">
     <link rel="stylesheet" href="styles/final-larger.css">
@@ -59,7 +61,7 @@
         <div class="explore-header">
             <h1>Explore Lost Cities</h1>
             <div class="filters">
-                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn current" data-filter="all">All</button>
                 <label class="filter-label">
                     Region
                     <select id="region-select" aria-label="Filter by region">
@@ -103,9 +105,9 @@
 
     <dialog id="city-modal">
         <button id="modal-close" class="modal-close-btn" aria-label="Close modal">&#x2715;</button>
-        <div class="modal-content">
-            <img id="modal-img" src="" alt="" width="500" height="300" loading="lazy">
-            <h2 id="modal-name"></h2>
+        <div class="modal-inner">
+            <img id="modal-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Placeholder" width="500" height="300" loading="lazy">
+            <h2 id="modal-name">Loading...</h2>
             <div class="modal-meta">
                 <span id="modal-civilization"></span>
                 <span id="modal-region"></span>
@@ -116,7 +118,7 @@
             <div id="modal-country-info" class="modal-country-info"></div>
             <div id="modal-artifact" class="modal-artifact">
                 <h3 id="artifact-title"></h3>
-                <img id="artifact-img" src="" alt="" loading="lazy" width="200" height="150">
+                <img id="artifact-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Placeholder" loading="lazy" width="200" height="150">
                 <p id="artifact-caption"></p>
             </div>
 
@@ -133,7 +135,7 @@
         <div class="footer-left">
             <div class="footer-links">
                 <a href="attributions.html">Attributions</a>
-                <a href="https://youtube/placeholder" target="_blank" rel="noopener">Project Video</a>
+                <a href="https://youtube/.com/placeholder" target="_blank" rel="noopener">Project Video</a>
             </div>
             <p>@thelostatlas.info.com</p>
         </div>
@@ -145,7 +147,7 @@
             <a href="https://x.com" aria-label="X" target="_blank" rel="noopener">
                 <img src="images/twitter-3.svg" alt="Twitter logo">
             </a>
-            <a href="https://linkendin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
                 <img src="images/linkedin-square.svg" alt="LinkedIn logo">
             </a>
         </div>

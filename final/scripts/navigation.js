@@ -4,8 +4,8 @@ const themeBtn = document.querySelector('#theme-btn');
 
 if (navButton && navBar) {
     navButton.addEventListener('click', () => {
-        navButton.classList.toggle('show');
-        navBar.classList.toggle('show');
+        navButton.classList.toggle('open');
+        navBar.classList.toggle('open');
     });
 }
 

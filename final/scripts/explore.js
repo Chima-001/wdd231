@@ -21,7 +21,7 @@ function buildCard(city, index) {
     card.innerHTML = `
 <img src="${city.image}" alt="${city.name}" loading="${index < 4 ? 'eager' : 'lazy'}" width="300" height="180">
 <div class="city-card-body">
-<h3>${city.name}</h3>
+<h2>${city.name}</h3>
 <p>${city.civilization} &bull; ${city.region}</p>
 <p>${city.year}</p>
 <span class="city-tag status-${statusClass}">${city.status}</span>
@@ -37,8 +37,9 @@ function displayCities(cities) {
     cities.forEach((city, index) => {
         citiesGrid.appendChild(buildCard(city, index));
     });
+    citiesGrid.style.minHeight = '0';
     resultsCount.textContent = `${cities.length} ${cities.length === 1 ? 'city' : 'cities'} found`;
-    observeCards();
+    requestAnimationFrame(() => observeCards());
 }
 
 function observeCards() {
@@ -49,9 +50,9 @@ function observeCards() {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0, rootMargin: '100px' });
 
-    document.querySelectorAll('.city-card:not(.visible').forEach(card => {
+    document.querySelectorAll('.city-card:not(.visible)').forEach(card => {
         observer.observe(card);
     });
 }
@@ -165,8 +166,8 @@ statusSelect.addEventListener('change', filterAndDisplay);
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        filterBtns.forEach(b => b.classList.remove('current'));
+        btn.classList.add('current');
     });
 });
 

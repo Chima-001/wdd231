@@ -22,6 +22,7 @@ body.light {
     --primary: #ffffff;
     --primary-2: #f8f6f0;
     --accent-2: #000;
+    --muted: #5a5a5a;
 }
 
 * {
@@ -99,7 +100,7 @@ header {
     transition: transform 0.4s ease, opacity 0.3s ease;
 }
 
-.hamburger.show::before {
+.hamburger.open::before {
     content: "\2715";
     transform: rotate(90deg);
 }
@@ -132,7 +133,7 @@ header {
     transition: max-height 3s ease-out;
 }
 
-.navigation.show {
+.navigation.open {
     max-height: 500px;
 }
 
@@ -183,7 +184,7 @@ header {
     transition: opacity 2s ease-in-out;
 }
 
-.hero img.active {
+.hero img.current {
     opacity: 1;
     z-index: 1;
 }
@@ -303,6 +304,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    min-height: 520px;
 }
 
 .city-card {
@@ -333,7 +335,7 @@ h2 {
     gap: 0.4rem;
 }
 
-.city-card h3 {
+.city-card h2 {
     font-family: 'Cinzel', serif;
     color: var(--accent);
     font-size: 0.95rem;
@@ -431,7 +433,7 @@ h2 {
 
 }
 
-.teaser-image img.active {
+.teaser-image img.current {
     opacity: 1;
     z-index: 1;
 }
@@ -462,13 +464,13 @@ h2 {
     gap: 0.4rem;
 }
 
-.filter-btn.active {
+.filter-btn.current {
     border: 1px solid var(--accent-2);
     color: var(--accent-2);
     font-weight: 700;
 }
 
-.filter-btn.active:hover {
+.filter-btn.current:hover {
     background-color: var(--accent);
     border: var(--accent);
     color: #000;
@@ -516,6 +518,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    min-height: 5500px;
 }
 
 #city-modal {
@@ -547,7 +550,7 @@ h2 {
     }
 }
 
-.modal-content {
+.modal-inner {
     padding: 1.5rem;
 }
 
@@ -618,7 +621,7 @@ h2 {
     background-color: var(--earth);
 }
 
-.nominate-container {
+.nominate-wrap {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -705,7 +708,7 @@ h2 {
 }
 
 .confirmation-intro {
-    color: var(--muted);
+    color: var(--tlight-mode);
     margin-bottom: 1.5rem;
 }
 
@@ -801,6 +804,7 @@ footer {
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
+    /* min-height: 280px; */
 }
 
 footer img {

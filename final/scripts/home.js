@@ -34,8 +34,8 @@ async function startRotator(sectionSelector, imgKey, altKey, storageKey, interva
 
         img1.src = images[currentIndex];
         img1.alt = altText;
-        img1.classList.add('active');
-        img2.classList.remove('active');
+        img1.classList.add('current');
+        img2.classList.remove('current');
 
         try {
             localStorage.setItem(storageKey, currentIndex);
@@ -51,8 +51,8 @@ async function startRotator(sectionSelector, imgKey, altKey, storageKey, interva
             const currentImg = showingImg1 ? img1 : img2;
             const nextImg = showingImg1 ? img2 : img1;
 
-            currentImg.classList.remove('active');
-            nextImg.classList.add('active');
+            currentImg.classList.remove('current');
+            nextImg.classList.add('current');
 
             showingImg1 = !showingImg1;
 
@@ -98,10 +98,12 @@ async function loadFeatured() {
     const featured = [...cities].sort(() => Math.random() - 0.5).slice(0, 3);
 
     featured.forEach((city, index) => {
-        const card = buildCard(city, index);
-        featuredGrid.appendChild(card);
-        observeCards();
+        // const card = buildCard(city, index);
+        // featuredGrid.appendChild(card);
+        // observeCards();
+        featuredGrid.appendChild(buildCard(city, index));
     });
+    requestAnimationFrame(() => observeCards());
 }
 
 function observeCards() {
@@ -114,7 +116,7 @@ function observeCards() {
                 }
             });
         },
-        { threshold: 0.15 },
+        { threshold: 0, rootMargin: '100px'}
     );
 
     document.querySelectorAll(".city-card:not(.visible)").forEach((card) => {
