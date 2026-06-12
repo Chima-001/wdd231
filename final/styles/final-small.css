@@ -792,6 +792,16 @@ h2 {
     margin: 0;
 }
 
+.attributions {
+    /* font-size: 0.75rem; */
+    color: var(--tlight-mode);
+    margin-top: 0.5rem;
+}
+
+.attributions ul a{
+    color: var(--accent-2);
+}
+
 footer {
     background-color: var(--surface);
     border-top: 1px solid var(--border);
